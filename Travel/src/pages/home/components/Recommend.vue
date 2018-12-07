@@ -4,7 +4,7 @@
             热销推荐
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl" >
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -21,47 +21,10 @@
 
 export default{
     name: 'HomeRecommend',
-    data (){
-        return{
-            recommendList: [{
-                    id: '0001',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/12/88ee179e9cdd4902ffecc16e12fa4e1e.water.jpg_200x200_08bf7b1e.jpg',
-                    title: '世纪欢乐园',
-                    desc: "探寻火车文化，感受迪斯尼欢乐"
-                },{
-                    id: '0002',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/bb/bb456c41736963ab.water.jpg_200x200_042d91c3.jpg',
-                    title: '禅宗少林音乐大典',
-                    desc: "🔥好评如潮，小伙伴热推景点~"
-                },{
-                    id: '0003',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1710/37/37da055bc2d39755a3.img.jpg_200x200_aec295f8.jpg',
-                    title: '郑州方特欢乐世界',
-                    desc: "高科技主题乐园，方特成就欢乐梦想"
-                },{
-                    id: '0004',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/7f/7f95b9cb5cc9e227.water.jpg_200x200_2767529b.jpg',
-                    title: '郑州绿博园',
-                    desc: "近期小伙伴们收藏最！多！的景点😊"
-                },{
-                    id: '0005',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/bb/bb456c41736963ab.water.jpg_200x200_042d91c3.jpg',
-                    title: '禅宗少林音乐大典',
-                    desc: "🔥好评如潮，小伙伴热推景点~"
-                },{
-                    id: '0006',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1710/37/37da055bc2d39755a3.img.jpg_200x200_aec295f8.jpg',
-                    title: '郑州方特欢乐世界',
-                    desc: "高科技主题乐园，方特成就欢乐梦想"
-                },{
-                    id: '0007',
-                    imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/7f/7f95b9cb5cc9e227.water.jpg_200x200_2767529b.jpg',
-                    title: '郑州绿博园',
-                    desc: "近期小伙伴们收藏最！多！的景点😊"
-                }]
-            }
-        }
+    props: {
+        list: Array
     }
+}
 </script>
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'

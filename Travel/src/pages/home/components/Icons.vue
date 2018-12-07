@@ -19,56 +19,18 @@
 <script type="text/javascript">
 export default{
     name: 'HomeIcons',
+    props: {
+        list: Array
+    },
     data (){
         return{
-            swiperOption:{},
-            iconList:[{
-              id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc: "景点门票"
-            },{
-                id: '0002',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: "一日游"
-            },{
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                desc: "郑州必游"
-            },{
-                id: '0004',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1811/5e/c640ec3b7d7ae802.png',
-                desc: "打卡圣地"
-            },{
-                id: '0005',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png',
-                desc: "当地好玩"
-            },{
-                id: '0006',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-                desc: "动物园"
-            },{
-                id: '0007',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-                desc: "名胜古迹"
-            },{
-                id: '0008',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-                desc: "景点门票"
-            },{
-                id: '0009',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                desc: "一日游"
-            },{
-                id: '0010',
-                imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-                desc: "babedoll隐藏测试"
-            }]
+            swiperOption:{}
         }
     },
     computed: {
         pages (){
             const pages = []
-            this.iconList.forEach((item,index) => {
+            this.list.forEach((item,index) => {
                 // 取整  0就是0页 1就是1页
                 const page = Math.floor(index/8)
                 // 如果pages中不含page页
