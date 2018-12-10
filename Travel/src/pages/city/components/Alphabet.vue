@@ -37,9 +37,7 @@ export default{
             timer: null
         }
      },
-     // 当页面数据被更新且页面被渲染后会执行
      updated (){
-         // 获取a元素距离顶部高度
         this.startY = this.$refs['A'][0].offsetTop
      },
      methods: {
@@ -47,17 +45,18 @@ export default{
             this.$emit('change',e.target.innerText)
         },
         handleTouchStart (){
+
             this.touchStatus = true
         },
         handleTouchMove (e){
-
             if(this.touchStatus){
                 //时间节流
                 if(this.timer){
                     clearTimeout(this.timer)
                 }
                 this.timer = setTimeout(() => {
-                    const touchY=e.touches[0].clientY - 79
+
+                    const touchY= e.touches[0].clientY - 79
                     const index = Math.floor((touchY - this.startY) / 20)
                     if(index >= 0 && index<= this.letters.length)
                     {
