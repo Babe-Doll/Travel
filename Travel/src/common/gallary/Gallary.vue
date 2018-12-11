@@ -16,25 +16,23 @@
 </template>
 
 <script>
+
 export default{
     name: 'CommonGallary',
     props:{
         imgs: {
-            type: Array,
-            default (){
-                return ['http://img1.qunarzz.com/sight/p0/1412/12/88ee179e9cdd4902ffecc16e12fa4e1e.water.jpg_r_800x800_b4eaa620.jpg',
-                'http://img1.qunarzz.com/sight/p0/201309/02/48e39192336e6c8bc8d65eac.jpg_r_800x800_1b739d9b.jpg'
-                ]
-            }
+            type: Array
         }
     },
     data (){
-        return{
+        return {
             swiperOption: {
                 pagination: '.swiper-pagination',
                 paginationType : 'fraction',
-                observeParents: true,
-                observe: true
+                observe: true,
+                initialSlide :0,
+                observeParents: true
+
             }
         }
     },
