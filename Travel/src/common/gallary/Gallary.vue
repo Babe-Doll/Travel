@@ -15,7 +15,7 @@
 
 </template>
 
-<script type="text/javascript">
+<script>
 export default{
     name: 'CommonGallary',
     props:{
@@ -68,6 +68,6 @@ export default{
                 width: 100%
             .swiper-pagination
                 color: #fff
-                bottom:-1rem
+                bottom: -1rem
 
 </style>
